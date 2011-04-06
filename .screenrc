@@ -1,0 +1,41 @@
+caption always "%{= kw}[ %H$HOST_POSTFIX ]  %{= kw}%-w%{= G}%n %0L=%t%+020<%{-}%+w %-= %{G}%c:%s"
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+#
+# ##    Some general options    ##
+#
+# # Turn off start message:
+startup_message off
+#
+# # Set messages timeout to one second:
+msgwait 1
+
+maptimeout 100
+#
+# # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+#
+# ##    Keybindings    ##
+#
+# # bind F7  to detach screen session from this terminal
+# # bind F8  to kill current screen window.
+# # bind F9  to create a new screen
+# # bind F10 to rename current screen window
+# # bind F11 to move to previous window
+# # bind F12 to move to next window
+bindkey -k k7 detach
+bindkey -k k8 kill
+bindkey -k k9 screen
+bindkey -k k; title
+bindkey -k F1 prev
+bindkey -k F2 next
+bindkey ";2P" prev
+bindkey ";2Q" next
+#
+#
+vbell on
+vbell_msg "   Wuff  ----  Wuff!!  "
+
+termcapinfo xterm* ti@:te@
+
+altscreen on
+
